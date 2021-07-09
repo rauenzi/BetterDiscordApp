@@ -1,5 +1,7 @@
-.bd-addon-errors {
-    margin-top: 16px;
+.bd-addon-error-tabbar-item {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-right: 20px;
 }
 
 .bd-addon-error {
@@ -8,6 +10,10 @@
     padding: 0;
     margin-bottom: 16px;
     background: var(--deprecated-card-editable-bg);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
     border: 1px solid;
 }
 
@@ -19,15 +25,13 @@
     border-color: var(--background-tertiary);
 }
 
-.bd-addon-error-header {
-    display: flex;
-    align-items: center;
-    padding: 20px 16px;
-    cursor: pointer;
+.bd-addon-error.expanded .bd-addon-error-header {
+    padding-bottom: 20px;
 }
 
 .bd-addon-error-icon {
     display: flex;
+    flex: 0 0 auto;
     align-items: center;
     justify-content: center;
     align-self: flex-start;
@@ -44,38 +48,16 @@
     height: 24px !important;
 }
 
-.bd-addon-error-expander {
-    color: var(--interactive-normal);
-    transition: transform 0.2s ease;
+.bd-addon-error-tabbar-item:first-of-type {
+    margin-left: 0;
 }
 
-.bd-addon-error-expander,
-.bd-addon-error-icon {
-    flex: 0 0 auto;
+.bd-addon-error-content {
+    padding-top: 16px;
+    padding-bottom: 0;
 }
 
-.bd-addon-error.collapsed .bd-addon-error-expander {
-    transform: rotate(90deg);
-}
-
-.bd-addon-error-header-inner {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-}
-
-.bd-addon-error-body {
-    padding: 0 16px 24px;
-}
-
-.bd-addon-error-stack code {
-    user-select: text;
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-    text-indent: 0;
-    white-space: pre-wrap;
-    scrollbar-width: thin;
-    scrollbar-color: var(--background-tertiary) var(--background-secondary);
-    background: var(--background-secondary);
-    border: 1px solid var(--background-tertiary);
+.bd-addon-error-stack pre {
+    margin: 0;
+    max-width: unset;
 }
